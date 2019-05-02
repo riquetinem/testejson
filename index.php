@@ -29,15 +29,10 @@
     foreach($array as $row) //Extract the Array Values by using Foreach Loop
     {
         $query .= "INSERT INTO tabela(text) VALUES ('".$row["text"]."'); ";  // Make Multiple Insert Query
-        $table_data .= '
-            <tr>
-       <td>'.$row["text"].'</td>
-
-      </tr>
-           '; //Data for display on Web page
     }
 
     echo $query;
+    // (mysqli_multi_query($connect, $query)) // Rodar varios sql ao mesmo tempo
 
     ?>
     <br />
